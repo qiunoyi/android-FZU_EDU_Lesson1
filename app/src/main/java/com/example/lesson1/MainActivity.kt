@@ -24,10 +24,16 @@ class MainActivity : AppCompatActivity() {
         ActivityCollector.addActivity(this)
         //隐藏标题栏
         supportActionBar?.hide()
-        //我要注册
+        //注册
         binding.LUText.setOnClickListener {
             val intent=Intent(this,LoginUp::class.java).apply {
                 //这里可以加上传递的内容putExtra("param1","data1")
+            }
+            startActivity(intent)
+        }
+        //登录
+        binding.LIButton.setOnClickListener{
+            val intent=Intent(this,MainActivity2::class.java).apply {
             }
             startActivity(intent)
         }
